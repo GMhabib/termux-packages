@@ -40,8 +40,8 @@ fi
 
 	if $TERMUX_ON_DEVICE_BUILD; then
 		# For on-device build cleanup /data shouldn't be erased.
-		rm -Rf "$TERMUX_TOPDIR"
+		rm -fr "$TERMUX_TOPDIR"
 	else
-		rm -Rf /data/* "$TERMUX_TOPDIR"
+		rm -fr /data/* "$TERMUX_TOPDIR"
 	fi
 } 5< "$TERMUX_BUILD_LOCK_FILE"
